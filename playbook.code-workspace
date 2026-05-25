@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../Documents/IBM-Repo/playbook"
+		},
+		{
+			"path": "../../../Documents/Personal-Project"
+		}
+	],
+	"settings": {
+		"github-enterprise.uri": "https://github.ibm.com/"
+	}
+}
