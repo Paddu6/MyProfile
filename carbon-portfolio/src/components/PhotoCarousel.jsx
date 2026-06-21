@@ -7,12 +7,12 @@ const PhotoCarousel = () => {
   // Use Vite's base URL to ensure images work in production
   const baseUrl = import.meta.env.BASE_URL;
   const photos = [
-    `${baseUrl}IMG_0539.jpg`,
-    `${baseUrl}IMG_4242.jpg`,
-    `${baseUrl}IMG_4245.jpg`,
-    `${baseUrl}IMG_4247.jpg`,
-    `${baseUrl}IMG_4313.jpg`,
-    `${baseUrl}IMG_7740.jpg`,
+    `${baseUrl}IMG_0539-small.jpg`,
+    `${baseUrl}IMG_4242-small.jpg`,
+    `${baseUrl}IMG_4245-small.jpg`,
+    `${baseUrl}IMG_4247-small.jpg`,
+    `${baseUrl}IMG_4313-small.jpg`,
+    `${baseUrl}IMG_7740-small.jpg`,
   ];
 
   // Auto-scroll every 4 seconds
