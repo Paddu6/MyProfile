@@ -2,6 +2,10 @@
 
 A modern, professional portfolio website built with React, Carbon Design System, and Storybook for component documentation.
 
+## 🌐 Live Demo
+
+**Visit the live site:** [https://paddu6.github.io/MyProfile/](https://paddu6.github.io/MyProfile/)
+
 ## 🚀 Features
 
 - **Carbon Design System**: Built with IBM's Carbon Design System for a professional, accessible UI
@@ -151,7 +155,50 @@ Carbon uses design tokens. Override them in `src/App.scss`:
 
 ## 🚢 Deployment
 
-### Build for Production
+### ✅ GitHub Pages Deployment (Active)
+
+This portfolio is deployed to GitHub Pages and accessible at:
+**https://paddu6.github.io/MyProfile/**
+
+#### Configuration Details
+
+1. **Vite Configuration**
+   - Base path set to `/MyProfile/` in `vite.config.js`
+   - Optimized production build with gzip compression
+
+2. **Deployment Package**
+   - Using `gh-pages` package (v6.3.0)
+   - Automated deployment scripts in `package.json`
+
+3. **Build Statistics**
+   - `index.html`: 0.49 kB (gzipped: 0.31 kB)
+   - CSS bundle: 841.48 kB (gzipped: 84.87 kB)
+   - JS bundle: 277.87 kB (gzipped: 87.11 kB)
+
+#### Deploy Updates
+
+To update the live site after making changes:
+
+```bash
+npm run deploy
+```
+
+This command will:
+1. Build the latest production version
+2. Deploy to the `gh-pages` branch automatically
+3. Update the live site within minutes
+
+#### What's Live
+
+The deployed site includes:
+- ✅ Photo carousel with 6 images
+- ✅ Carbon Design System styling
+- ✅ Responsive navigation
+- ✅ Professional experience timeline
+- ✅ Volunteering experience section
+- ✅ All Carbon components and styling
+
+### Build for Production (Local)
 
 ```bash
 npm run build
@@ -167,11 +214,10 @@ npm run build-storybook
 
 The Storybook build will be in the `storybook-static/` directory.
 
-### Deployment Options
+### Other Deployment Options
 
 - **Netlify**: Drag and drop the `dist` folder
 - **Vercel**: Connect your Git repository
-- **GitHub Pages**: Use GitHub Actions to deploy
 - **AWS S3**: Upload the `dist` folder to an S3 bucket
 
 ## 🔧 Configuration Files
