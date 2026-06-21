@@ -1,0 +1,117 @@
+.photo-carousel {
+  width: 100%;
+  background: var(--cds-layer-01);
+  padding: var(--cds-spacing-07) 0;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--cds-spacing-05);
+  }
+
+  &__track {
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &__slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cds-layer-02);
+
+    &--active {
+      // Active slide styling if needed
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    color: var(--cds-text-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    &--prev {
+      left: var(--cds-spacing-05);
+    }
+
+    &--next {
+      right: var(--cds-spacing-05);
+    }
+
+    @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--cds-spacing-03);
+    margin-top: var(--cds-spacing-05);
+  }
+
+  &__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--cds-border-subtle);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+
+    &:hover {
+      border-color: var(--cds-border-interactive);
+      transform: scale(1.2);
+    }
+
+    &--active {
+      background: var(--cds-border-interactive);
+      border-color: var(--cds-border-interactive);
+    }
+  }
+}
+
+// Made with Bob

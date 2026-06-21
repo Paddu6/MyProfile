@@ -1,0 +1,249 @@
+// Import Carbon styles using CSS
+@import '@carbon/styles/css/styles.css';
+
+// Custom styles for the portfolio
+.portfolio {
+  min-height: 100vh;
+  background: var(--cds-background);
+}
+
+// Hero Section
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--cds-background) 0%, var(--cds-layer-01) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: var(--cds-spacing-10) var(--cds-spacing-05);
+
+  &__content {
+    text-align: center;
+    z-index: 2;
+    max-width: 800px;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--cds-spacing-05);
+    color: var(--cds-text-primary);
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    color: var(--cds-text-secondary);
+    margin-bottom: var(--cds-spacing-07);
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__wave {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: var(--cds-spacing-05);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
+}
+
+// About Section
+.about-section {
+  padding: var(--cds-spacing-10) var(--cds-spacing-05);
+  background: var(--cds-layer-01);
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--cds-text-secondary);
+    margin-bottom: var(--cds-spacing-05);
+  }
+}
+
+// Timeline Section
+.timeline-section {
+  padding: var(--cds-spacing-10) var(--cds-spacing-05);
+  background: var(--cds-background);
+
+  &__header {
+    text-align: center;
+    margin-bottom: var(--cds-spacing-09);
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--cds-spacing-03);
+    color: var(--cds-text-primary);
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    color: var(--cds-text-secondary);
+  }
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: var(--cds-border-subtle);
+
+    @media (max-width: 768px) {
+      left: 20px;
+    }
+  }
+
+  &__item {
+    margin-bottom: var(--cds-spacing-09);
+    position: relative;
+
+    @media (max-width: 768px) {
+      margin-left: 60px;
+    }
+  }
+}
+
+// Documents Section
+.documents-section {
+  padding: var(--cds-spacing-10) var(--cds-spacing-05);
+  background: var(--cds-layer-01);
+
+  &__header {
+    text-align: center;
+    margin-bottom: var(--cds-spacing-09);
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--cds-spacing-03);
+    color: var(--cds-text-primary);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--cds-spacing-07);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.document-card {
+  background: var(--cds-layer-02);
+  padding: var(--cds-spacing-07);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  .document-icon {
+    font-size: 4rem;
+    margin-bottom: var(--cds-spacing-05);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--cds-spacing-03);
+    color: var(--cds-text-primary);
+  }
+
+  p {
+    color: var(--cds-text-secondary);
+    margin-bottom: var(--cds-spacing-05);
+  }
+}
+
+// Contact Section
+.contact-section {
+  padding: var(--cds-spacing-10) var(--cds-spacing-05);
+  background: var(--cds-background);
+
+  &__header {
+    text-align: center;
+    margin-bottom: var(--cds-spacing-09);
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--cds-spacing-03);
+    color: var(--cds-text-primary);
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    color: var(--cds-text-secondary);
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: var(--cds-spacing-05);
+    flex-wrap: wrap;
+  }
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: var(--cds-spacing-03);
+  padding: var(--cds-spacing-05) var(--cds-spacing-06);
+  background: var(--cds-layer-01);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--cds-text-primary);
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: var(--cds-link-primary);
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+  }
+}
+
+// Footer
+.footer {
+  background: var(--cds-layer-02);
+  padding: var(--cds-spacing-07) var(--cds-spacing-05);
+  text-align: center;
+  color: var(--cds-text-secondary);
+}
+
+// Made with Bob

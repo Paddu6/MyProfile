@@ -1,0 +1,100 @@
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--cds-spacing-09);
+  display: flex;
+  align-items: flex-start;
+
+  &__marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--cds-layer-01);
+    border: 4px solid var(--cds-border-interactive);
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.3s ease;
+
+    @media (max-width: 768px) {
+      left: -30px;
+    }
+  }
+
+  &--volunteer &__marker {
+    border-color: var(--cds-support-success);
+  }
+
+  &:hover &__marker {
+    transform: translateX(-50%) scale(1.3);
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.2);
+  }
+
+  &--volunteer:hover &__marker {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.2);
+  }
+
+  &__content {
+    background: var(--cds-layer-01);
+    padding: var(--cds-spacing-06);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: calc(50% - 40px);
+    margin-left: auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &:nth-child(even) &__content {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  &__date {
+    margin-bottom: var(--cds-spacing-03);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--cds-spacing-02);
+    color: var(--cds-text-primary);
+  }
+
+  &__company {
+    font-size: 1.125rem;
+    color: var(--cds-text-secondary);
+    margin-bottom: var(--cds-spacing-05);
+  }
+
+  &__description {
+    color: var(--cds-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--cds-spacing-05);
+
+    ul {
+      padding-left: var(--cds-spacing-05);
+    }
+
+    li {
+      margin-bottom: var(--cds-spacing-03);
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cds-spacing-03);
+  }
+}
+
+// Made with Bob
